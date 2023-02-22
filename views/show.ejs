@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%-include('./partials/head.ejs')%>
+</head>
+<body>
+    <%- include('./partials/nav.ejs')%>
+    <div class="show">
+        <a href="/pokemon" style="text-decoration:none; font-size: 20px; color: firebrick;">Home</a>
+        <a href="/pokemon/<%=pokemon._id; %>/edit" style="text-decoration:none; font-size: 20px; color: firebrick;">Edit</a>
+        <form action="/pokemon/<%=pokemon._id%>?_method=DELETE" method="POST">
+            <input type="submit" value="Delete">
+        </form>
+
+        <h1 class="showName"><%=pokemon.name%></h1>
+        <div class="content">
+            <div class="left-content">
+                <h3>Pokemon # <%=pokemon.id%></h3>
+                <img src="<%=pokemon.img%>" class="showImg">
+                <h4>Type</h4>
+                <p><%=pokemon.type%></p><br>
+            </div>
+            
+            <div class="right-content">
+                <h4 class="stats">Stats</h4>
+                <p>HP: <%=pokemon.stats.hp%></p>
+                <p>Attack: <%=pokemon.stats.attack%></p>
+                <p>Defense: <%=pokemon.stats.defense%></p>
+                <p>spattack: <%=pokemon.stats.spattack%></p>
+                <p>spdefense: <%=pokemon.stats.spdefense%></p>
+                <p>speed: <%=pokemon.stats.speed%></p>
+            </div>
+        </div>
+    
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%-include('./partials/head.ejs')%>
+</head>
+<body>
+    <%- include('./partials/nav.ejs')%>
+    <a href="/pokemon">Home</a>
+    <h1 class="edit">Edit Pokemon</h1>
+    <form action="/pokemon/<%= pokemon._id %>?_method=PUT" method="POST">
+        <input type="text" name="name" placeholder="Name" value="<%=pokemon.name%>">
+
+        <input type="text" name="type" placeholder="Type" value="<%=pokemon.type[0]%>">
+        <input type="text" name="type" placeholder="Type" value="<%=pokemon.type[1]%>">
+
+        <input type="text" name="hp" placeholder="hp" value="<%=pokemon.hp%>"/>
+        <input type="text" name="attack" placeholder="attack" value="<%=pokemon.attack%>"/>
+        <input type="text" name="defense" placeholder="defense" value="<%=pokemon.defense%>"/>
+        <input type="text" name="spattack" placeholder="spattack" value="<%=pokemon.spattack%>"/>
+        <input type="text" name="spdefense" placeholder="spdefense" value="<%=pokemon.spdefense%>"/>
+        <input type="text" name="speed" placeholder="speed" value="<%=pokemon.speed%>"/>
+
+        <input type="text" name="img" placeholder="Image" value="<%=pokemon.img%>">
+
+        <input type="submit" value="Edit Pokemon">
+    </form>
+</body>
+</html>

@@ -1,0 +1,99 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: lightgoldenrodyellow;
+}
+
+img{
+    height: 150px;
+    width: 150px;
+    border-radius: 15px;
+}
+
+.navbar{
+    overflow: hidden;
+    background-color: firebrick;
+    position: fixed;
+    top: 2;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    height: 60px;
+    border-radius: 15px;
+}
+
+.navbar h1{
+    font-size: 50px;
+    color: whitesmoke;
+}
+
+.navbar a{
+    color: whitesmoke;
+    padding: 14px 16px;
+    text-decoration: none;
+
+}
+
+.container{
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.grid{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+}
+
+.card{
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 70px;
+}
+
+form, .edit{
+    margin-top: 50px;
+}
+
+.show{
+    padding-top: 80px;
+}
+
+.showName{
+    text-align: center;
+    font-size: 50px;
+}
+
+.content{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 30px;
+}
+
+.showImg{
+    height: 300px;
+    width: 300px;
+}
+
+
+.left-content h4, .left-content p, .left-content h3{
+    text-align: center;
+}
+
+.left-content h4, .left-content p{
+    font-size: 30px;
+}
+
+.right-content h4, .right-content p  {
+    font-size: 40px;
+}
+
+input[type=text] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+}

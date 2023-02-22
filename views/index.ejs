@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%-include('./partials/head.ejs')%>
+</head>
+<body>
+    <%- include('./partials/nav.ejs')%>
+    <div class="container">
+        <section class="grid">
+            <% for(let i = 0; i < allpokemon.length; i++) { %>
+                <div class="card">
+                        <a href="/pokemon/<%=allpokemon[i]._id%>"> <img src="<%=allpokemon[i].img%>" > </a>
+                </div>
+                <% } %>
+        </section>
+    </div>
+
+</body>
+</html>
